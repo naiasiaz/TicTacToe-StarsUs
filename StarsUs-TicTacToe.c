@@ -20,7 +20,7 @@ void buatPlayer(); //
 void tampilCaraBermain(); //
 void tampilMenuKeluar(); //
 void pilihUkuranPapan(); //
-int hitungSkor();
+//int hitungSkor();
 
 void buatPapan3x3();
 char cekPemenang3x3();
@@ -32,11 +32,7 @@ void bermain5x5();
 
 void buatPapan7x7();
 char cekPemenang7x7();
-void bermain5x5();
-
-//Variable global 
-const char Pemain1 = 'X';
-const char Pemain2 = 'O';
+void bermain7x7();
 
 //Modul Bermain
 void resetPapan();
@@ -46,13 +42,15 @@ void giliranPemain2();
 void cetakPemenang(char pemenang);
 
 //Variabel global
+const char Pemain1 = 'X';
+const char Pemain2 = 'O';
 char nama[2][10];
 int hasilPapan;
 char papan[10][10];
 
 //Modul waktu
-int waktuAwal();
-int waktuAkhir();
+//int waktuAwal();
+//int waktuAkhir();
 
 int main(){
 	tampilMenuAwal();
@@ -185,7 +183,7 @@ void pilihUkuranPapan(){
 			break;
 		case 3:
 			hasilPapan=9;
-			buatPapan7x7();
+			bermain7x7();
 			break;
 		default:
 			printf("\t\t\t\t\t\xaf\xaf\xaf Pilihanmu salah, pilih lagi!\n\n");
@@ -215,27 +213,27 @@ int cekRuangKosong(){
 	return ruangKosong;
 }
 
-int waktuAwal()
-{
-	clock_t waktu;
-	waktu = clock();
-	return waktu;
-}
-
-int waktuAkhir()
-{
-	clock_t waktu;
-	waktu = clock();
-	return waktu;
-}
+//int waktuAwal()
+//{
+//	clock_t waktu;
+//	waktu = clock();
+//	return waktu;
+//}
+//
+//int waktuAkhir()
+//{
+//	clock_t waktu;
+//	waktu = clock();
+//	return waktu;
+//}
 
 void giliranPemain1(){
 	int x;
 	int y;
-	int waktu;
-	double waktuMain;
-	waktu = waktuAwal();
-	if(giliranPemain1)
+//	int waktu;
+//	double waktuMain;
+//	waktu = waktuAwal();
+//	if(giliranPemain1)
 	do{
 		printf("\t\t\t\t\tGiliran %s!\n", &nama[0][0]);
 		printf("\t\t\t\t\tMasukkan Baris: ");
@@ -397,6 +395,58 @@ char cekPemenang5x5(){
 	return ' ';
 }
 
+char cekPemenang7x7(){
+	//cek baris
+	for (int i = 0; i < 7; i++){
+		if(papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][0] == papan[i][4]){
+			return papan[i][0];
+		}
+		if(papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4] && papan[i][1] == papan[i][5]){
+			return papan[i][1];
+		}
+		if(papan[i][2] == papan[i][3] && papan[i][2] == papan[i][4] && papan[i][2] == papan[i][5] && papan[i][2] == papan[i][6]){
+			return papan[i][1];
+		}	
+	}
+	//cek kolom
+	for (int i = 0; i < 7; i++){
+		if(papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[i][0] == papan[i][4]){
+			return papan[0][i];
+		}
+		if(papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i] && papan[i][0] == papan[i][4]){
+			return papan[1][i];
+		}
+		if(papan[2][i] == papan[i][3] && papan[i][2] == papan[i][4] && papan[i][2] == papan[i][5] && papan[i][2] == papan[i][6]){
+			return papan[i][1];	
+		}
+	}
+	//cek diagonal 
+	if(papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3]){
+			return papan[0][0];
+	}
+	if(papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3]){
+	 		return papan[1][0];
+	}
+	if(papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4]){
+			return papan[0][1];
+	}	
+	if(papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4]){
+			return papan[1][1];
+	}
+	if(papan[1][3] == papan[2][2] && papan[1][3] == papan[3][1] && papan[1][3] == papan[4][0]){
+			return papan[1][3];
+	}
+	if(papan[0][3] == papan[2][1] && papan[0][3] == papan[1][2] && papan[0][3] == papan[3][0]){
+			return papan[0][3];
+	}
+	if(papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1]){
+			return papan[1][4];
+	}
+	if(papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1]){
+			return papan[0][4];
+	}
+	return ' ';
+}
 
 void bermain3x3(){
 	char pemenang = ' ';
@@ -457,6 +507,42 @@ void bermain5x5(){
 			}
 			
 			buatPapan5x5();
+			cetakPemenang(pemenang);
+			printf("\t\t\t\t\t\t--------------------\n");
+			printf("\t\t\t\t\t\t[1] Main lagi\n");
+    		printf("\t\t\t\t\t\t[2] Keluar\n\n");
+    		printf("\t\t\t\t\t\tMasukkan Pilihanmu: "); 
+			scanf("%d",&pilih);
+    		switch(pilih){
+   				case 1:tampilMenuAwal();
+   						break;
+   				case 2:tampilMenuKeluar();
+   			}
+}
+
+void bermain7x7(){
+	char pemenang = ' ';
+	int pilih;
+	
+	resetPapan();
+			
+			while (pemenang == ' ' && cekRuangKosong() != 0){
+				buatPapan7x7();
+				
+				giliranPemain1();
+				pemenang = cekPemenang7x7();
+				if (pemenang != ' ' || cekRuangKosong() == 0){
+					break;
+				}
+				buatPapan7x7();
+				giliranPemain2();
+				pemenang = cekPemenang7x7();
+				if (pemenang != ' ' || cekRuangKosong() == 0){
+					break;
+				}
+			}
+			
+			buatPapan7x7();
 			cetakPemenang(pemenang);
 			printf("\t\t\t\t\t\t--------------------\n");
 			printf("\t\t\t\t\t\t[1] Main lagi\n");
