@@ -1,11 +1,20 @@
-//////////////////////////
-//   GAME TIC TAC TOE   //
-//////////////////////////
+//////////////////////////////////////////
+//////////   GAME TIC TAC TOE   /////////
+////////////////////////////////////////
 
-//Oleh:
-//ASRI HUSNUL ROSADI
-//JEIHAN ILHAM K
-//NAIA SITI AZ-ZAHRA
+//tess
+
+/*
+ * NAMA FILE : StarsUs-TicTacToe.c
+ *
+ * DESKRIPSI : Tic Tac Toe yang dimainkan oleh 2 player
+ *
+ * NAMA/AUTHOR : ASRI, JEIHAN, NAIA
+ *
+ * GAME TIC TAC TOE
+ *
+ * Copyright Politeknik Negeri Bandung | JTK 22, 2022 StarsUs.  All rights reserved.
+ */
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -13,52 +22,137 @@
 #include<conio.h>
 #include<time.h>
 
-//Modul Utama
-void tampilMenuAwal(); //
-void tampilMain(); //
-void buatPlayer(); //
-void tampilCaraBermain(); //
-void tampilMenuKeluar(); //
-void pilihUkuranPapan(); //
+//================================================ Modul Utama ========================================================//
+void tampilMenuAwal();
+/*{Prosedur menampilkan tampilan menu awal yang berisi menu “Main”, “Cara Bermain dan Aturan Bermain”, dan “Keluar”
+	I.S. : Menu awal tidak tampil di layar
+	F.S. : Menu awal sudah tampil di layar
+}*/
+
+void tampilMain();
+/*{Prosedur menampilkan permainan tic tac toe yang telah dibuat
+	I.S. : Permainan belum tampil di layar
+	F.S. : Permainan sudah tampil di layar
+}*/
+
+void buatPlayer();
+/*{Prosedur untuk membuat player yang terdiri dari 2 orang dengan menginputkan nama dari kedua player
+	I.S. : Kedua player belum ada
+	F.S. : Kedua player sudah ada
+}*/
+
+void tampilCaraBermain();
+/*{Prosedur menampilkan cara bermain beserta aturan bermain pada permainan tic tac toe
+	I.S. : Cara bermain dan aturan bermain belum tampil di layar
+	F.S. : Cara bermain dan aturan bermain sudah tampil di layar
+}*/
+
+void tampilMenuKeluar();
+/*{Prosedur menampilkan tampilan menu keluar permainan tic tac toe
+	I.S. : Layar menu awal tampil di layar
+	F.S. : Layar akan kosong dan keluar dari permainan
+}*/
+
+void pilihUkuranPapan();
+/*{Prosedur memilih ukuran papan yang terdiri dari papan 3x3, papan 5x5, dan papan 7x7
+	I.S. : Papan belum dipilih oleh player
+	F.S. : Papan sudah dipilih oleh player
+}*/
+
 //int hitungSkor();
 
 void buatPapan3x3();
+/*{Prosedur untuk membuat papan 3x3
+	I.S. : Papan 3x3 belum terbentuk
+	F.S. : Papan 3x3 sudah terbentuk
+}*/
+
 char cekPemenang3x3();
+//Fungsi mengecek siapa yang pertama berhasil membentuk deret atau menang pada papan 3x3
+
 void bermain3x3();
+/*{Prosedur mulai bermain pada papan 3x3
+	I.S. : Player belum bisa mulai bermain permainan
+	F.S. : Player sudah bisa bermain permainan
+}*/
 
 void buatPapan5x5();
+/*{Prosedur untuk membuat papan 5x5
+	I.S. : Papan 5x5 belum terbentuk
+	F.S. : Papan 5x5 sudah terbentuk
+}*/
+
 char cekPemenang5x5();
+//Fungsi mengecek siapa yang pertama berhasil membentuk deret atau menang papan 3x3
+
 void bermain5x5();
+/*{Prosedur mulai bermain pada papan 5x5
+	I.S. : Player belum bisa mulai bermain permainan
+	F.S. : Player sudah bisa bermain permainan
+}*/
 
 void buatPapan7x7();
+/*{Prosedur untuk membuat papan 7x7
+	I.S. : Papan 7x7 belum terbentuk
+	F.S. : Papan 7x7 sudah terbentuk
+}*/
+
 char cekPemenang7x7();
+//Fungsi mengecek siapa yang pertama berhasil membentuk deret atau menang papan 7x7
+
 void bermain7x7();
+/*{Prosedur mulai bermain pada papan 7x7
+	I.S. : Player belum bisa mulai bermain permainan
+	F.S. : Player sudah bisa bermain permainan
+}*/
 
-//Modul Bermain
+//================================================ Modul Bermain ========================================================//
 void resetPapan();
-int cekRuangKosong();
-void giliranPemain1();
-void giliranPemain2();
-void cetakPemenang(char pemenang);
+/*{Prosedur mereset atau membersihkan papan agar menjadi kosong
+	I.S. : Papan terisi dengan bidak
+	F.S. : Papan kosong tidak ada bidak
+}*/
 
-//Variabel global
-const char Pemain1 = 'X';
-const char Pemain2 = 'O';
-char nama[2][10];
+int cekRuangKosong();
+//Fungsi mengecek papan dalam keadaan kosong atau tidak
+
+void giliranPemain1();
+/*{Prosedur menampilkan giliran pemain1 untuk mulai bermain
+	I.S. : Pemain1 belum mulai giliran bermain
+	F.S. : Pemain1 mulai giliran bermain
+}*/
+
+void giliranPemain2();
+/*{Prosedur menampilkan giliran pemain2 untuk mulai bermain
+	I.S. : Pemain2 belum mulai giliran bermain
+	F.S. : Pemain2 mulai giliran bermain
+}*/
+
+void cetakPemenang(char pemenang);
+/*{Prosedur menampilkan pemenang dari permainan yang telah dimainkan
+	I.S. : Pemenang belum ditampilkan di layar
+	F.S. : Pemenang sudah ditampilkan di layar
+}*/
+
+//================================================ Variabel Global ========================================================//
+const char Pemain1 = 'X'; //pemain1 default bidak X
+const char Pemain2 = 'O'; //pemain2 default bidak O
+char nama[2][10]; //inputan nama untuk kedua player dengan maksimal nama 10 karakter
 int hasilPapan;
-char papan[10][10];
+char papan[7][7]; //papan permainan dengan maksimal dimensi 7x7
 
 //Modul waktu
 //int waktuAwal();
 //int waktuAkhir();
 
+//================================================== Main Body ==========================================================//
 int main(){
 	tampilMenuAwal();
 	
 	return 0;
 }
 
-// menu awal program
+//================================================= Main Program ========================================================// 
 void tampilMenuAwal(){
 	system("cls");
 	int pilMenu;
@@ -78,18 +172,17 @@ void tampilMenuAwal(){
     printf("\t\t\t\t\t[3] Keluar\n\n");
 	printf("\t\t\t\t Pilih yang mana? : "); scanf("%d",&pilMenu);
 	switch(pilMenu){
-   		case 1:
+   		case 1: // pemain memilih main dan masuk ke modul tampilMain()
    			tampilMain();
    			break;
-        case 2:
+        case 2: // pemain memilih untuk membaca cara bermain dan aturan bermain
         	system("cls");
    			tampilCaraBermain();
-			
    			break;
-		case 3:
+		case 3: // pemain memilih keluar dari program permainan tic tac toe
    			tampilMenuKeluar();	
    			break;	
-   		default:
+   		default: //jika pemain memasukkan angka selain 1,2, dan 3
    			printf("\n\t\t\t\t\t\xaf\xaf\xaf Pilihanmu salah, pilih lagi!");
       		getch();
       		tampilMenuAwal();
@@ -118,9 +211,9 @@ void buatPlayer(){
 	printf("\t\t\t\t\t\xb3_________________________________\xb3\n\n");
 	printf("\t\t\t\t\t\t  Input Nama Player \n\n");
     printf("\t\t\t\t\t Player 1 : ");
-    scanf("%s",&nama[0][0]);
+    scanf("%s",&nama[0][0]); //pemain1 menginputkan nama mulai dari baris 0 dan kolom 0 dengan maksimal 10 karakter
     printf("\t\t\t\t\t Player 2 : ");
-    scanf("%s",&nama[1][0]);
+    scanf("%s",&nama[1][0]); //pemain2 menginputkan nama mulai dari baris 1 dan kolom 0 dengan maksimal 10 karakter
 }
 
 void tampilCaraBermain(){
@@ -150,17 +243,17 @@ void tampilMenuKeluar(){
 	printf("\n\n\n");
 	printf("\t\t\t\t\t\tYakin mau keluar?\n\n");
     printf("\t\t\t\t\t[1] Gak jadi deh, mau main lagi\n");
-    printf("\t\t\t\t\t[2] Yakin\n\n");
+    printf("\t\t\t\t\t[Ketik Apapun] Yakin\n\n");
     printf("\t\t\t\tMasukkan Pilihanmu: "); 
 	scanf("%d",&pilih);
     switch(pilih){
-   		case 1:tampilMenuAwal();
+   		case 1:tampilMenuAwal(); //ketika memilih angka 1 akan kembali ke modul tampilMenuAwal() selain itu akan keluar dari program
    		}
 }
 
 void pilihUkuranPapan(){
 	int ukuran;
-	char pemenang = ' ';
+	char pemenang = ' '; //kondisi awal pemenang diisi kosong
 	system("cls");
    	printf("\n\n\n");
    	printf("\t\t\t\t\t\t\tPILIH PAPAN	\n\n");
@@ -173,21 +266,18 @@ void pilihUkuranPapan(){
 	scanf("%d",&ukuran);
 	system("cls");
 	switch(ukuran){
-		case 1:
-			hasilPapan=5;
+		case 1: // memilih ukuran papan 3x3
 			bermain3x3();
 			break;
-		case 2:
-			hasilPapan=7;
+		case 2: // memilih ukuran papan 5x5
 			bermain5x5();
 			break;
-		case 3:
-			hasilPapan=9;
+		case 3: //memilih ukuran papan 7x7
 			bermain7x7();
 			break;
-		default:
+		default: //jika pemain memasukkan angka selain 1,2, dan 3
 			printf("\t\t\t\t\t\xaf\xaf\xaf Pilihanmu salah, pilih lagi!\n\n");
-      		system("pause");
+      		system("pause"); //menampilkan pesan "Press any key to continue . . ." ke command prompt dan menunggu sampai pengguna menekan tombol apa pun untuk melanjutkan.
       		pilihUkuranPapan();
 	}
 }
@@ -195,7 +285,7 @@ void pilihUkuranPapan(){
 void resetPapan(){
 	for(int i = 0; i < 7; i++){
 		for(int j = 0; j < 7; j++){
-			papan[i][j] = ' ';
+			papan[i][j] = ' '; //papan dikosongkan
 		}	
 	}	
 }
@@ -228,8 +318,8 @@ int cekRuangKosong(){
 //}
 
 void giliranPemain1(){
-	int x;
-	int y;
+	int x; //variabel untuk menginputkan baris
+	int y; //variabel untuk menginputkan kolom
 //	int waktu;
 //	double waktuMain;
 //	waktu = waktuAwal();
@@ -325,19 +415,19 @@ void buatPapan7x7(){
 }
 
 char cekPemenang3x3(){
-	//cek baris
+	//cek baris membentuk horizontal
 	for (int i = 0; i < 3; i++){
 		if(papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2]){
 			return papan[i][0];
 		}
 	}
-	//cek kolom
+	//cek kolom membentuk vertikal
 	for (int i = 0; i < 3; i++){
 		if(papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i]){
 			return papan[0][i];
 		}
 	}
-	//cek diagonal 
+	//cek diagonal
 	if(papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2]){
 			return papan[0][0];
 	}	
@@ -349,7 +439,7 @@ char cekPemenang3x3(){
 }
 
 char cekPemenang5x5(){
-	//cek baris
+	//cek baris membentuk horizontal
 	for (int i = 0; i < 5; i++){
 		if(papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3]){
 			return papan[i][0];
@@ -358,7 +448,7 @@ char cekPemenang5x5(){
 			return papan[i][1];
 		}	
 	}
-	//cek kolom
+	//cek kolom membentuk vertikal
 	for (int i = 0; i < 5; i++){
 		if(papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i]){
 			return papan[0][i];
@@ -396,7 +486,7 @@ char cekPemenang5x5(){
 }
 
 char cekPemenang7x7(){
-	//cek baris
+	//cek baris membentuk horizontal
 	for (int i = 0; i < 7; i++){
 		if(papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][0] == papan[i][4]){
 			return papan[i][0];
@@ -408,7 +498,7 @@ char cekPemenang7x7(){
 			return papan[i][1];
 		}	
 	}
-	//cek kolom
+	//cek kolom membentuk vertikal
 	for (int i = 0; i < 7; i++){
 		if(papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[i][0] == papan[i][4]){
 			return papan[0][i];
@@ -449,14 +539,13 @@ char cekPemenang7x7(){
 }
 
 void bermain3x3(){
-	char pemenang = ' ';
+	char pemenang = ' '; //pemenang diisi kosong
 	int pilih;
 	
 	resetPapan();
 			
 			while (pemenang == ' ' && cekRuangKosong() != 0){
 				buatPapan3x3();
-				
 				giliranPemain1();
 				pemenang = cekPemenang3x3();
 				if (pemenang != ' ' || cekRuangKosong() == 0){
@@ -558,10 +647,10 @@ void bermain7x7(){
 
 void cetakPemenang(char pemenang){
 	if(pemenang == Pemain1){
-		printf ("\t\t\t\t\t\t%s menang!\n", &nama[0][0]);
+		printf ("\t\t\t\t\t\t%s menang!\n", &nama[0][0]); //jika pemenang adalah pemain1 akan mencetak bahwa pemain1 yang menang
 	}
 	else if(pemenang == Pemain2){
-		printf("\t\t\t\t\t%s menang!", &nama[1][0]);
+		printf("\t\t\t\t\t%s menang!", &nama[1][0]); //jika pemenang adalah pemain2 akan mencetak bahwa pemain2 yang menang
 	}
 	else{
 		printf("IT'S A TIE!");
