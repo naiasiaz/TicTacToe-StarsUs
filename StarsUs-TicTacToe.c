@@ -84,7 +84,6 @@ void tampilMenuAwal(){
         case 2:
         	system("cls");
    			tampilCaraBermain();
-			
    			break;
 		case 3:
    			tampilMenuKeluar();	
@@ -174,15 +173,12 @@ void pilihUkuranPapan(){
 	system("cls");
 	switch(ukuran){
 		case 1:
-			hasilPapan=5;
 			bermain3x3();
 			break;
 		case 2:
-			hasilPapan=7;
 			bermain5x5();
 			break;
 		case 3:
-			hasilPapan=9;
 			bermain7x7();
 			break;
 		default:
@@ -306,22 +302,22 @@ void buatPapan5x5(){
 	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n\n\n\n\n");
 }
 void buatPapan7x7(){
-	printf("\n\n\n\n\t\t\t\t\t  1    2    3    4    5    6    7\n");
-	printf("\t\t\t\t\t____________________________________\n");
+	printf("\n\n\n\n\t\t\t\t\t   1     2     3     4     5     6     7\n");
+	printf("\t\t\t\t\t___________________________________________\n");
 	printf("\t\t\t\t     1\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[0][0], papan[0][1], papan[0][2], papan[0][3], papan[0][4], papan[0][5], papan[0][6]);
-	printf("\n\t\t\t\t\t\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3\n");
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
 	printf("\t\t\t\t     2\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[1][0], papan[1][1], papan[1][2], papan[1][3], papan[1][4], papan[1][5], papan[1][6]);
-	printf("\n\t\t\t\t\t\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3\n");
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
 	printf("\t\t\t\t     3\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[2][0], papan[2][1], papan[2][2], papan[2][3], papan[2][4], papan[2][5], papan[2][6]);
-	printf("\n\t\t\t\t\t\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3\n");
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
 	printf("\t\t\t\t     4\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[3][0], papan[3][1], papan[3][2], papan[3][3], papan[3][4], papan[3][5], papan[3][6]);
-	printf("\n\t\t\t\t\t\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3\n");
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
 	printf("\t\t\t\t     5\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[4][0], papan[4][1], papan[4][2], papan[4][3], papan[4][4], papan[4][5], papan[4][6]);
-	printf("\n\t\t\t\t\t\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3\n");	
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");	
 	printf("\t\t\t\t     6\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[5][0], papan[5][1], papan[5][2], papan[5][3], papan[5][4], papan[5][5], papan[5][6]);
-	printf("\n\t\t\t\t\t\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3\n");	
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");	
 	printf("\t\t\t\t     7\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[6][0], papan[6][1], papan[6][2], papan[6][3], papan[6][4], papan[6][5], papan[6][6]);
-	printf("\n\t\t\t\t\t\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3____\xb3\n\n\n\n\n");	
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n\n\n\n\n");	
 }
 
 char cekPemenang3x3(){
@@ -478,7 +474,8 @@ void bermain3x3(){
     		printf("\t\t\t\t\t\tMasukkan Pilihanmu: "); 
 			scanf("%d",&pilih);
     		switch(pilih){
-   				case 1:tampilMenuAwal();
+   				case 1:system("cls");
+				   		bermain3x3();
    						break;
    				case 2:tampilMenuKeluar();
    			}
@@ -514,7 +511,8 @@ void bermain5x5(){
     		printf("\t\t\t\t\t\tMasukkan Pilihanmu: "); 
 			scanf("%d",&pilih);
     		switch(pilih){
-   				case 1:tampilMenuAwal();
+   				case 1:system("cls");
+				   		bermain5x5();
    						break;
    				case 2:tampilMenuKeluar();
    			}
@@ -550,7 +548,8 @@ void bermain7x7(){
     		printf("\t\t\t\t\t\tMasukkan Pilihanmu: "); 
 			scanf("%d",&pilih);
     		switch(pilih){
-   				case 1:tampilMenuAwal();
+   				case 1:system("cls");
+				   		bermain7x7();
    						break;
    				case 2:tampilMenuKeluar();
    			}
