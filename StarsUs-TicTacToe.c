@@ -111,7 +111,7 @@ void resetPapan();
 	F.S. : Papan kosong tidak ada bidak
 }*/
 
-int cekRuangKosong();
+int cekRuangKosong(int jumlahPapan);
 // Fungsi mengecek papan dalam keadaan kosong atau tidak
 
 void giliranPemain1();
@@ -309,9 +309,9 @@ void resetPapan()
 	}
 }
 
-int cekRuangKosong()
+int cekRuangKosong(int jumlahPapan)
 {
-	int ruangKosong = 49;
+	int ruangKosong = jumlahPapan*jumlahPapan;
 
 	for (int i = 0; i < 7; i++)
 	{
@@ -476,25 +476,27 @@ void giliranPemain2()
 		// cek baris membentuk horizontal
 		for (int i = 0; i < 3; i++)
 		{
-			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2])
+			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][1] == papan[i][2])
 			{
 				return papan[i][0];
 			}
 		}
+		
 		// cek kolom membentuk vertikal
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i <= 3; i++)
 		{
-			if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i])
+			if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[1][i] == papan[2][i])
 			{
 				return papan[0][i];
 			}
 		}
+		
 		// cek diagonal
-		if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2])
+		if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[1][1] == papan[2][2])
 		{
 			return papan[0][0];
 		}
-		if (papan[0][2] == papan[1][1] && papan[0][2] == papan[2][0])
+		if (papan[0][2] == papan[1][1] && papan[0][2] == papan[2][0] && papan[1][1] == papan[2][0])
 		{
 			return papan[0][2];
 		}
@@ -507,9 +509,9 @@ void giliranPemain2()
 		// cek baris membentuk horizontal
 		for (int i = 0; i < 5; i++)
 		{
-			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3])
+			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][0] == papan[i][4])
 			{
-				return papan[i][0];
+				return papan[i][0];                                                                      
 			}
 			if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4])
 			{
@@ -641,19 +643,19 @@ void giliranPemain2()
 
 		resetPapan();
 
-		while (pemenang == ' ' && cekRuangKosong() != 0)
+		while (pemenang == ' ' && cekRuangKosong(3) != 0)
 		{
 			buatPapan3x3();
 			giliranPemain1();
 			pemenang = cekPemenang3x3();
-			if (pemenang != ' ' || cekRuangKosong() == 0)
+			if (pemenang != ' ' || cekRuangKosong(3) == 0)
 			{
 				break;
 			}
 			buatPapan3x3();
 			giliranPemain2();
 			pemenang = cekPemenang3x3();
-			if (pemenang != ' ' || cekRuangKosong() == 0)
+			if (pemenang != ' ' || cekRuangKosong(3) == 0)
 			{
 				break;
 			}
@@ -684,20 +686,19 @@ void giliranPemain2()
 
 		resetPapan();
 
-		while (pemenang == ' ' && cekRuangKosong() != 0)
+		while (pemenang == ' ' && cekRuangKosong(5) != 0)
 		{
 			buatPapan5x5();
-
 			giliranPemain1();
 			pemenang = cekPemenang5x5();
-			if (pemenang != ' ' || cekRuangKosong() == 0)
+			if (pemenang != ' ' || cekRuangKosong(5) == 0)
 			{
-				break;
+			pemenang = cekPemenang5x5();
 			}
 			buatPapan5x5();
 			giliranPemain2();
 			pemenang = cekPemenang5x5();
-			if (pemenang != ' ' || cekRuangKosong() == 0)
+			if (pemenang != ' ' || cekRuangKosong(5) == 0)
 			{
 				break;
 			}
@@ -728,20 +729,19 @@ void giliranPemain2()
 
 		resetPapan();
 
-		while (pemenang == ' ' && cekRuangKosong() != 0)
+		while (pemenang == ' ' && cekRuangKosong(7) != 0)
 		{
 			buatPapan7x7();
-
 			giliranPemain1();
 			pemenang = cekPemenang7x7();
-			if (pemenang != ' ' || cekRuangKosong() == 0)
+			if (pemenang != ' ' || cekRuangKosong(7) == 0)
 			{
 				break;
 			}
 			buatPapan7x7();
 			giliranPemain2();
 			pemenang = cekPemenang7x7();
-			if (pemenang != ' ' || cekRuangKosong() == 0)
+			if (pemenang != ' ' || cekRuangKosong(7) == 0)
 			{
 				break;
 			}
@@ -773,6 +773,8 @@ void giliranPemain2()
 			skorPemain1 = skorPemain1 + 3;
 			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
 			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
+			printf("\t\t\t\t\t\t-------------------\n");
+			printf("\t\t\t\t\t\tHighscore = \n");
 		}
 		else if (pemenang == Pemain2)
 		{
@@ -780,13 +782,17 @@ void giliranPemain2()
 			skorPemain2 = skorPemain2 + 3;
 			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
 			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
+			printf("\t\t\t\t\t\t-------------------\n");
+			printf("\t\t\t\t\t\tHighscore = \n");
 		}
 		else
 		{
-			printf("IT'S A TIE!");
+			printf("\t\t\t\t\t\tIT'S A TIE!\n");
 			skorPemain1 = skorPemain1 + 1;
 			skorPemain2 = skorPemain2 + 1;
 			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
 			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
+			printf("\t\t\t\t\t\t-------------------\n");
+			printf("\t\t\t\t\t\tHighscore = \n");
 		}
 	}
