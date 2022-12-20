@@ -311,7 +311,7 @@ void resetPapan()
 
 int cekRuangKosong(int jumlahPapan)
 {
-	int ruangKosong = jumlahPapan*jumlahPapan;
+	int ruangKosong = jumlahPapan * jumlahPapan;
 
 	for (int i = 0; i < 7; i++)
 	{
@@ -416,383 +416,422 @@ void giliranPemain2()
 				papan[x][y] = Pemain2;
 				break;
 			}
-		} 
+		}
 	} while (papan[x][y] != ' ');
 }
 
-	// int hitungSkor(){
-	//	printf("%s", &nama[0][0]"	\xb3	%s\n", &nama[1][0]);
-	// }
+// int hitungSkor(){
+//	printf("%s", &nama[0][0]"	\xb3	%s\n", &nama[1][0]);
+// }
 
-	void buatPapan3x3()
+void buatPapan3x3()
+{
+	printf("\n\n\n\n\n\t\t\t\t\t\t   1	 2     3\n");
+	printf("\t\t\t\t\t\t___________________\n");
+	printf("\t\t\t\t\t     1\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[0][0], papan[0][1], papan[0][2]);
+	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t\t     2\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[1][0], papan[1][1], papan[1][2]);
+	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t\t     3\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[2][0], papan[2][1], papan[2][2]);
+	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3\n\n\n\n\n");
+}
+
+void buatPapan5x5()
+{
+	printf("\n\n\n\n\n\t\t\t\t\t\t   1     2     3     4     5\n");
+	printf("\t\t\t\t\t\t_______________________________\n");
+	printf("\t\t\t\t\t     1\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[0][0], papan[0][1], papan[0][2], papan[0][3], papan[0][4]);
+	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t\t     2\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[1][0], papan[1][1], papan[1][2], papan[1][3], papan[1][4]);
+	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t\t     3\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[2][0], papan[2][1], papan[2][2], papan[2][3], papan[2][4]);
+	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t\t     4\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[3][0], papan[3][1], papan[3][2], papan[3][3], papan[3][4]);
+	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t\t     5\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[4][0], papan[4][1], papan[4][2], papan[4][3], papan[4][4]);
+	printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n\n\n\n\n");
+}
+void buatPapan7x7()
+{
+	printf("\n\n\n\n\t\t\t\t\t   1     2     3     4     5     6     7\n");
+	printf("\t\t\t\t\t___________________________________________\n");
+	printf("\t\t\t\t     1\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[0][0], papan[0][1], papan[0][2], papan[0][3], papan[0][4], papan[0][5], papan[0][6]);
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t     2\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[1][0], papan[1][1], papan[1][2], papan[1][3], papan[1][4], papan[1][5], papan[1][6]);
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t     3\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[2][0], papan[2][1], papan[2][2], papan[2][3], papan[2][4], papan[2][5], papan[2][6]);
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t     4\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[3][0], papan[3][1], papan[3][2], papan[3][3], papan[3][4], papan[3][5], papan[3][6]);
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t     5\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[4][0], papan[4][1], papan[4][2], papan[4][3], papan[4][4], papan[4][5], papan[4][6]);
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t     6\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[5][0], papan[5][1], papan[5][2], papan[5][3], papan[5][4], papan[5][5], papan[5][6]);
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
+	printf("\t\t\t\t     7\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[6][0], papan[6][1], papan[6][2], papan[6][3], papan[6][4], papan[6][5], papan[6][6]);
+	printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n\n\n\n\n");
+}
+
+char cekPemenang3x3()
+{
+	// cek baris membentuk horizontal
+	for (int i = 0; i < 3; i++)
 	{
-		printf("\n\n\n\n\n\t\t\t\t\t\t   1	 2     3\n");
-		printf("\t\t\t\t\t\t___________________\n");
-		printf("\t\t\t\t\t     1\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[0][0], papan[0][1], papan[0][2]);
-		printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t\t     2\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[1][0], papan[1][1], papan[1][2]);
-		printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t\t     3\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[2][0], papan[2][1], papan[2][2]);
-		printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3\n\n\n\n\n");
+		if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][1] == papan[i][2])
+		{
+			return papan[i][0];
+		}
 	}
 
-	void buatPapan5x5()
+	// cek kolom membentuk vertikal
+	for (int i = 0; i < 3; i++)
 	{
-		printf("\n\n\n\n\n\t\t\t\t\t\t   1     2     3     4     5\n");
-		printf("\t\t\t\t\t\t_______________________________\n");
-		printf("\t\t\t\t\t     1\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[0][0], papan[0][1], papan[0][2], papan[0][3], papan[0][4]);
-		printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t\t     2\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[1][0], papan[1][1], papan[1][2], papan[1][3], papan[1][4]);
-		printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t\t     3\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[2][0], papan[2][1], papan[2][2], papan[2][3], papan[2][4]);
-		printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t\t     4\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[3][0], papan[3][1], papan[3][2], papan[3][3], papan[3][4]);
-		printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t\t     5\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[4][0], papan[4][1], papan[4][2], papan[4][3], papan[4][4]);
-		printf("\n\t\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n\n\n\n\n");
-	}
-	void buatPapan7x7()
-	{
-		printf("\n\n\n\n\t\t\t\t\t   1     2     3     4     5     6     7\n");
-		printf("\t\t\t\t\t___________________________________________\n");
-		printf("\t\t\t\t     1\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[0][0], papan[0][1], papan[0][2], papan[0][3], papan[0][4], papan[0][5], papan[0][6]);
-		printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t     2\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[1][0], papan[1][1], papan[1][2], papan[1][3], papan[1][4], papan[1][5], papan[1][6]);
-		printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t     3\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[2][0], papan[2][1], papan[2][2], papan[2][3], papan[2][4], papan[2][5], papan[2][6]);
-		printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t     4\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[3][0], papan[3][1], papan[3][2], papan[3][3], papan[3][4], papan[3][5], papan[3][6]);
-		printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t     5\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[4][0], papan[4][1], papan[4][2], papan[4][3], papan[4][4], papan[4][5], papan[4][6]);
-		printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t     6\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[5][0], papan[5][1], papan[5][2], papan[5][3], papan[5][4], papan[5][5], papan[5][6]);
-		printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n");
-		printf("\t\t\t\t     7\t\xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3  %c  \xb3", papan[6][0], papan[6][1], papan[6][2], papan[6][3], papan[6][4], papan[6][5], papan[6][6]);
-		printf("\n\t\t\t\t\t\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3_____\xb3\n\n\n\n\n");
+		if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[1][i] == papan[2][i])
+		{
+			return papan[0][i];
+		}
 	}
 
-	char cekPemenang3x3()
+	// cek diagonal
+	if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[1][1] == papan[2][2])
 	{
-		// cek baris membentuk horizontal
-		for (int i = 0; i < 3; i++)
-		{
-			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][1] == papan[i][2])
-			{
-				return papan[i][0];
-			}
-		}
-		
-		// cek kolom membentuk vertikal
-		for (int i = 0; i <= 3; i++)
-		{
-			if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[1][i] == papan[2][i])
-			{
-				return papan[0][i];
-			}
-		}
-		
-		// cek diagonal
-		if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[1][1] == papan[2][2])
-		{
-			return papan[0][0];
-		}
-		if (papan[0][2] == papan[1][1] && papan[0][2] == papan[2][0] && papan[1][1] == papan[2][0])
-		{
-			return papan[0][2];
-		}
-
-		return ' ';
+		return papan[0][0];
+	}
+	if (papan[0][2] == papan[1][1] && papan[0][2] == papan[2][0] && papan[1][1] == papan[2][0])
+	{
+		return papan[0][2];
 	}
 
-	char cekPemenang5x5()
+	return ' ';
+}
+
+char cekPemenang5x5()
+{
+	// cek baris membentuk horizontal
+	for (int i = 0; i < 5; i++)
 	{
-		// cek baris membentuk horizontal
-		for (int i = 0; i < 5; i++)
+		if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][1] == papan[i][2] && papan[i][2] == papan[i][3])
 		{
-			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][0] == papan[i][4])
-			{
-				return papan[i][0];                                                                      
-			}
-			if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4])
-			{
-				return papan[i][1];
-			}
+			return papan[i][0];
 		}
-		// cek kolom membentuk vertikal
-		for (int i = 0; i < 5; i++)
+		if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4])
 		{
-			if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i])
-			{
-				return papan[0][i];
-			}
-			if (papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i])
-			{
-				return papan[1][i];
-			}
+			return papan[i][1];
 		}
-		// cek diagonal
-		if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3])
-		{
-			return papan[0][0];
-		}
-		if (papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3])
-		{
-			return papan[1][0];
-		}
-		if (papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4])
-		{
-			return papan[0][1];
-		}
-		if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4])
-		{
-			return papan[1][1];
-		}
-		if (papan[1][3] == papan[2][2] && papan[1][3] == papan[3][1] && papan[1][3] == papan[4][0])
-		{
-			return papan[1][3];
-		}
-		if (papan[0][3] == papan[2][1] && papan[0][3] == papan[1][2] && papan[0][3] == papan[3][0])
-		{
-			return papan[0][3];
-		}
-		if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1])
-		{
-			return papan[1][4];
-		}
-		if (papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1])
-		{
-			return papan[0][4];
-		}
-		return ' ';
 	}
 
-	char cekPemenang7x7()
+	// cek kolom membentuk vertikal
+	for (int i = 0; i < 5; i++)
 	{
-		// cek baris membentuk horizontal
-		for (int i = 0; i < 7; i++)
+		if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[1][i] == papan[2][i] && papan[2][i] == papan[3][i])
 		{
-			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][0] == papan[i][4])
-			{
-				return papan[i][0];
-			}
-			if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4] && papan[i][1] == papan[i][5])
-			{
-				return papan[i][1];
-			}
-			if (papan[i][2] == papan[i][3] && papan[i][2] == papan[i][4] && papan[i][2] == papan[i][5] && papan[i][2] == papan[i][6])
-			{
-				return papan[i][1];
-			}
+			return papan[0][i];
 		}
-		// cek kolom membentuk vertikal
-		for (int i = 0; i < 7; i++)
+		if (papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i])
 		{
-			if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[i][0] == papan[i][4])
-			{
-				return papan[0][i];
-			}
-			if (papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i] && papan[i][0] == papan[i][4])
-			{
-				return papan[1][i];
-			}
-			if (papan[2][i] == papan[i][3] && papan[i][2] == papan[i][4] && papan[i][2] == papan[i][5] && papan[i][2] == papan[i][6])
-			{
-				return papan[i][1];
-			}
+			return papan[1][i];
 		}
-		// cek diagonal
-		if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3])
-		{
-			return papan[0][0];
-		}
-		if (papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3])
-		{
-			return papan[1][0];
-		}
-		if (papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4])
-		{
-			return papan[0][1];
-		}
-		if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4])
-		{
-			return papan[1][1];
-		}
-		if (papan[1][3] == papan[2][2] && papan[1][3] == papan[3][1] && papan[1][3] == papan[4][0])
-		{
-			return papan[1][3];
-		}
-		if (papan[0][3] == papan[2][1] && papan[0][3] == papan[1][2] && papan[0][3] == papan[3][0])
-		{
-			return papan[0][3];
-		}
-		if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1])
-		{
-			return papan[1][4];
-		}
-		if (papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1])
-		{
-			return papan[0][4];
-		}
-		return ' ';
 	}
 
-	void bermain3x3()
+	// cek diagonal
+	if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3] && papan[1][1] == papan[2][2] && papan[2][2] == papan[3][3])
 	{
-		char pemenang = ' '; // pemenang diisi kosong
-		int pilih;
+		return papan[0][0];
+	}
+	if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4] && papan[2][2] == papan[3][3] && papan[3][3] == papan[4][4])
+	{
+		return papan[1][1];
+	}
+	if (papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3] && papan[2][1] == papan[3][2] && papan[3][2] == papan[4][3])
+	{
+		return papan[1][0];
+	}
+	if (papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4] && papan[1][2] == papan[2][3] && papan[2][3] == papan[3][4])
+	{
+		return papan[0][1];
+	}
+	if (papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1] && papan[1][3] == papan[2][2] && papan[2][2] == papan[3][1])
+	{
+		return papan[0][4];
+	}
+	if (papan[1][3] == papan[2][2] && papan[1][3] == papan[3][1] && papan[1][3] == papan[4][0] && papan[2][2] == papan[3][1] && papan[3][1] == papan[4][0])
+	{
+		return papan[1][3];
+	}if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1] && papan[2][3] == papan[3][2] && papan[3][2] == papan[4][1])
+	{
+		return papan[1][4];
+	}
+	if (papan[0][3] == papan[1][2] && papan[0][3] == papan[2][1] && papan[0][3] == papan[3][0] && papan[1][2] == papan[2][1] && papan[2][1] == papan[3][0])
+	{
+		return papan[0][3];
+	}
+	
+	return ' ';
+}
 
-		resetPapan();
-
-		while (pemenang == ' ' && cekRuangKosong(3) != 0)
+char cekPemenang7x7()
+{
+	// cek baris membentuk horizontal
+	for (int i = 0; i < 7; i++)
+	{
+		if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][0] == papan[i][4] && papan[i][1] == papan[i][2] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4])
 		{
-			buatPapan3x3();
-			giliranPemain1();
-			pemenang = cekPemenang3x3();
-			if (pemenang != ' ' || cekRuangKosong(3) == 0)
-			{
-				break;
-			}
-			buatPapan3x3();
-			giliranPemain2();
-			pemenang = cekPemenang3x3();
-			if (pemenang != ' ' || cekRuangKosong(3) == 0)
-			{
-				break;
-			}
+			return papan[i][0];
 		}
+		if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4] && papan[i][1] == papan[i][5] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4] && papan[i][4] == papan[i][5])
+		{
+			return papan[i][1];
+		}
+		if (papan[i][2] == papan[i][3] && papan[i][2] == papan[i][4] && papan[i][2] == papan[i][5] && papan[i][2] == papan[i][6] && papan[i][3] == papan[i][4] && papan[i][4] == papan[i][5] && papan[i][5] == papan[i][6])
+		{
+			return papan[i][2];
+		}
+	}
 
+	// cek kolom membentuk vertikal
+	for (int i = 0; i < 7; i++)
+	{
+		if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[0][i] == papan[4][i] && papan[1][i] == papan[2][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i])
+		{
+			return papan[0][i];
+		}
+		if (papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i] && papan[1][i] == papan[5][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i] && papan[4][i] == papan[5][i])
+		{
+			return papan[1][i];
+		}
+		if (papan[2][i] == papan[3][i] && papan[2][i] == papan[4][i] && papan[2][i] == papan[5][i] && papan[2][i] == papan[6][i] && papan[3][i] == papan[4][i] && papan[4][i] == papan[5][i] && papan[5][i] == papan[6][i])
+		{
+			return papan[i][1];
+		}
+	}
+
+	// cek diagonal
+	if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3] && papan[0][0] == papan[4][4] && papan[1][1] == papan[2][2] && papan[2][2] == papan[3][3] && papan[3][3] == papan[4][4])
+	{
+		return papan[0][0];
+	}
+	if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4] && papan[1][1] == papan[5][5] && papan[2][2] == papan[3][3] && papan[3][3] == papan[4][4] && papan[4][4] == papan[5][5]) 
+	{
+		return papan[1][1];
+	}
+	if (papan[2][2] == papan[3][3] && papan[2][2] == papan[4][4] && papan[2][2] == papan[5][5] && papan[2][2] == papan[6][6] && papan[3][3] == papan[4][4] && papan[4][4] == papan[5][5] && papan[5][5] == papan[6][6]) 
+	{
+		return papan[2][2];
+	}
+	if (papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3] && papan[1][0] == papan[5][4] && papan[2][1] == papan[3][2] && papan[3][2] == papan[4][3] && papan[4][3] == papan[5][4])
+	{
+		return papan[1][0];
+	}
+	if (papan[2][1] == papan[3][2] && papan[2][1] == papan[4][3] && papan[2][1] == papan[5][4] && papan[2][1] == papan[6][5] && papan[3][2] == papan[4][3] && papan[4][3] == papan[5][4] && papan[5][4] == papan[6][5])
+	{
+		return papan[2][1];
+	}
+	if (papan[2][0] == papan[3][1] && papan[2][0] == papan[4][2] && papan[2][0] == papan[5][3] && papan[2][0] == papan[6][4] && papan[3][1] == papan[4][2] && papan[4][2] == papan[5][3] && papan[5][3] == papan[6][4])
+	{
+		return papan[2][0];
+	}
+	if (papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4] && papan[0][1] == papan[4][5] && papan[1][2] == papan[2][3] && papan[2][3] == papan[3][4] && papan[3][4] == papan[4][5])
+	{
+		return papan[0][1];
+	}
+	if (papan[1][2] == papan[2][3] && papan[1][2] == papan[3][4] && papan[1][2] == papan[4][5] && papan[1][2] == papan[5][6] && papan[2][3] == papan[3][4] && papan[3][4] == papan[4][5] && papan[4][5] == papan[5][6])
+	{
+		return papan[1][2];
+	}
+	if (papan[0][2] == papan[1][3] && papan[0][2] == papan[2][4] && papan[0][2] == papan[3][5] && papan[0][2] == papan[4][6] && papan[1][3] == papan[2][4] && papan[2][4] == papan[3][5] && papan[3][5] == papan[4][6])
+	{
+		return papan[0][2];
+	}
+	if (papan[0][6] == papan[1][5] && papan[0][6] == papan[2][4] && papan[0][6] == papan[3][3] && papan[0][6] == papan[4][2] && papan[1][5] == papan[2][4] && papan[2][4] == papan[3][3] && papan[3][3] == papan[4][2])
+	{
+		return papan[0][6];
+	}
+	if (papan[1][5] == papan[2][4] && papan[1][5] == papan[3][3] && papan[1][5] == papan[4][2] && papan[1][5] == papan[5][1] && papan[2][4] == papan[3][3] && papan[3][3] == papan[4][2] && papan[4][2] == papan[5][1])
+	{
+		return papan[1][5];
+	}
+	if (papan[2][4] == papan[3][3] && papan[2][4] == papan[4][2] && papan[2][4] == papan[5][1] && papan[2][4] == papan[6][0] && papan[3][3] == papan[4][2] && papan[4][2] == papan[5][1] && papan[5][1] == papan[6][0])
+	{
+		return papan[2][4];
+	}
+	if (papan[1][6] == papan[2][5] && papan[1][6] == papan[3][4] && papan[1][6] == papan[4][3] && papan[1][6] == papan[5][2] && papan[2][5] == papan[3][4] && papan[3][4] == papan[4][3] && papan[4][3] == papan[5][2])
+	{
+		return papan[1][6];
+	}
+	if (papan[2][5] == papan[3][4] && papan[2][5] == papan[4][3] && papan[2][5] == papan[5][2] && papan[2][5] == papan[6][1] && papan[3][4] == papan[4][3] && papan[4][3] == papan[5][2] && papan[5][2] == papan[6][1])
+	{
+		return papan[2][5];
+	}
+	if (papan[2][6] == papan[3][5] && papan[2][6] == papan[4][4] && papan[2][6] == papan[5][3] && papan[2][6] == papan[6][2] && papan[3][5] == papan[4][4] && papan[4][4] == papan[5][3] && papan[5][3] == papan[6][2])
+	{
+		return papan[2][6];
+	}
+	if (papan[0][5] == papan[1][4] && papan[0][5] == papan[2][3] && papan[0][5] == papan[3][2] && papan[0][5] == papan[4][1] && papan[1][4] == papan[2][3] && papan[2][3] == papan[3][2] && papan[3][2] == papan[4][1])
+	{
+		return papan[0][5];
+	}
+	if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1] && papan[1][4] == papan[5][0] && papan[2][3] == papan[3][2] && papan[3][2] == papan[4][1] && papan[4][1] == papan[5][0])
+	{
+		return papan[1][4];
+	}
+	if (papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1] && papan[0][4] == papan[4][0] && papan[1][3] == papan[2][2] && papan[2][2] == papan[3][1] && papan[3][1] == papan[4][0])
+	{
+		return papan[0][4];
+	}
+	
+	return ' ';
+}
+
+void bermain3x3()
+{
+	char pemenang = ' '; // pemenang diisi kosong
+	int pilih;
+
+	resetPapan();
+
+	while (pemenang == ' ' && cekRuangKosong(3) != 0)
+	{
 		buatPapan3x3();
-		cetakPemenang(pemenang);
-		printf("\t\t\t\t\t\t-------------------\n");
-		printf("\t\t\t\t\t\t[1] Main lagi\n");
-		printf("\t\t\t\t\t\t[2] Keluar\n\n");
-		printf("\t\t\t\t\t\tMasukkan Pilihanmu: ");
-		scanf("%d", &pilih);
-		switch (pilih)
+		giliranPemain1();
+		pemenang = cekPemenang3x3();
+		if (pemenang != ' ' || cekRuangKosong(3) == 0)
 		{
-		case 1:
-			system("cls");
-			bermain3x3();
 			break;
-		case 2:
-			tampilMenuKeluar();
+		}
+		buatPapan3x3();
+		giliranPemain2();
+		pemenang = cekPemenang3x3();
+		if (pemenang != ' ' || cekRuangKosong(3) == 0)
+		{
+			break;
 		}
 	}
 
-	void bermain5x5()
+	buatPapan3x3();
+	cetakPemenang(pemenang);
+	printf("\t\t\t\t\t\t-------------------\n");
+	printf("\t\t\t\t\t\t[1] Main lagi\n");
+	printf("\t\t\t\t\t\t[2] Keluar\n\n");
+	printf("\t\t\t\t\t\tMasukkan Pilihanmu: ");
+	scanf("%d", &pilih);
+	switch (pilih)
 	{
-		char pemenang = ' ';
-		int pilih;
+	case 1:
+		system("cls");
+		bermain3x3();
+		break;
+	case 2:
+		tampilMenuKeluar();
+	}
+}
 
-		resetPapan();
+void bermain5x5()
+{
+	char pemenang = ' ';
+	int pilih;
 
-		while (pemenang == ' ' && cekRuangKosong(5) != 0)
-		{
-			buatPapan5x5();
-			giliranPemain1();
-			pemenang = cekPemenang5x5();
-			if (pemenang != ' ' || cekRuangKosong(5) == 0)
-			{
-			pemenang = cekPemenang5x5();
-			}
-			buatPapan5x5();
-			giliranPemain2();
-			pemenang = cekPemenang5x5();
-			if (pemenang != ' ' || cekRuangKosong(5) == 0)
-			{
-				break;
-			}
-		}
+	resetPapan();
 
+	while (pemenang == ' ' && cekRuangKosong(5) != 0)
+	{
 		buatPapan5x5();
-		cetakPemenang(pemenang);
-		printf("\t\t\t\t\t\t--------------------\n");
-		printf("\t\t\t\t\t\t[1] Main lagi\n");
-		printf("\t\t\t\t\t\t[2] Keluar\n\n");
-		printf("\t\t\t\t\t\tMasukkan Pilihanmu: ");
-		scanf("%d", &pilih);
-		switch (pilih)
+		giliranPemain1();
+		pemenang = cekPemenang5x5();
+		if (pemenang != ' ' || cekRuangKosong(5) == 0)
 		{
-		case 1:
-			system("cls");
-			bermain5x5();
 			break;
-		case 2:
-			tampilMenuKeluar();
+		}
+		buatPapan5x5();
+		giliranPemain2();
+		pemenang = cekPemenang5x5();
+		if (pemenang != ' ' || cekRuangKosong(5) == 0)
+		{
+			break;
 		}
 	}
 
-	void bermain7x7()
+	buatPapan5x5();
+	cetakPemenang(pemenang);
+	printf("\t\t\t\t\t\t--------------------\n");
+	printf("\t\t\t\t\t\t[1] Main lagi\n");
+	printf("\t\t\t\t\t\t[2] Keluar\n\n");
+	printf("\t\t\t\t\t\tMasukkan Pilihanmu: ");
+	scanf("%d", &pilih);
+	switch (pilih)
 	{
-		char pemenang = ' ';
-		int pilih;
+	case 1:
+		system("cls");
+		bermain5x5();
+		break;
+	case 2:
+		tampilMenuKeluar();
+	}
+}
 
-		resetPapan();
+void bermain7x7()
+{
+	char pemenang = ' ';
+	int pilih;
 
-		while (pemenang == ' ' && cekRuangKosong(7) != 0)
-		{
-			buatPapan7x7();
-			giliranPemain1();
-			pemenang = cekPemenang7x7();
-			if (pemenang != ' ' || cekRuangKosong(7) == 0)
-			{
-				break;
-			}
-			buatPapan7x7();
-			giliranPemain2();
-			pemenang = cekPemenang7x7();
-			if (pemenang != ' ' || cekRuangKosong(7) == 0)
-			{
-				break;
-			}
-		}
+	resetPapan();
 
+	while (pemenang == ' ' && cekRuangKosong(7) != 0)
+	{
 		buatPapan7x7();
-		cetakPemenang(pemenang);
-		printf("\t\t\t\t\t\t--------------------\n");
-		printf("\t\t\t\t\t\t[1] Main lagi\n");
-		printf("\t\t\t\t\t\t[2] Keluar\n\n");
-		printf("\t\t\t\t\t\tMasukkan Pilihanmu: ");
-		scanf("%d", &pilih);
-		switch (pilih)
+		giliranPemain1();
+		pemenang = cekPemenang7x7();
+		if (pemenang != ' ' || cekRuangKosong(7) == 0)
 		{
-		case 1:
-			system("cls");
-			bermain7x7();
 			break;
-		case 2:
-			tampilMenuKeluar();
+		}
+		buatPapan7x7();
+		giliranPemain2();
+		pemenang = cekPemenang7x7();
+		if (pemenang != ' ' || cekRuangKosong(7) == 0)
+		{
+			break;
 		}
 	}
 
-	void cetakPemenang(char pemenang)
+	buatPapan7x7();
+	cetakPemenang(pemenang);
+	printf("\t\t\t\t\t\t--------------------\n");
+	printf("\t\t\t\t\t\t[1] Main lagi\n");
+	printf("\t\t\t\t\t\t[2] Keluar\n\n");
+	printf("\t\t\t\t\t\tMasukkan Pilihanmu: ");
+	scanf("%d", &pilih);
+	switch (pilih)
 	{
-		if (pemenang == Pemain1)
-		{
-			printf("\t\t\t\t\t\t%s menang!\n", &nama[0][0]); // jika pemenang adalah pemain1 akan mencetak bahwa pemain1 yang menang
-			skorPemain1 = skorPemain1 + 3;
-			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
-			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
-			printf("\t\t\t\t\t\t-------------------\n");
-			printf("\t\t\t\t\t\tHighscore = \n");
-		}
-		else if (pemenang == Pemain2)
-		{
-			printf("\t\t\t\t\t\t%s menang!\n", &nama[1][0]); // jika pemenang adalah pemain2 akan mencetak bahwa pemain2 yang menang
-			skorPemain2 = skorPemain2 + 3;
-			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
-			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
-			printf("\t\t\t\t\t\t-------------------\n");
-			printf("\t\t\t\t\t\tHighscore = \n");
-		}
-		else
-		{
-			printf("\t\t\t\t\t\tIT'S A TIE!\n");
-			skorPemain1 = skorPemain1 + 1;
-			skorPemain2 = skorPemain2 + 1;
-			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
-			printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
-			printf("\t\t\t\t\t\t-------------------\n");
-			printf("\t\t\t\t\t\tHighscore = \n");
-		}
+	case 1:
+		system("cls");
+		bermain7x7();
+		break;
+	case 2:
+		tampilMenuKeluar();
 	}
+}
+
+void cetakPemenang(char pemenang)
+{
+	if (pemenang == Pemain1)
+	{
+		printf("\t\t\t\t\t\t%s menang!\n", &nama[0][0]); // jika pemenang adalah pemain1 akan mencetak bahwa pemain1 yang menang
+		skorPemain1 = skorPemain1 + 3;
+		printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
+		printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
+	}
+	else if (pemenang == Pemain2)
+	{
+		printf("\t\t\t\t\t\t%s menang!\n", &nama[1][0]); // jika pemenang adalah pemain2 akan mencetak bahwa pemain2 yang menang
+		skorPemain2 = skorPemain2 + 3;
+		printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
+		printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
+	}
+	else
+	{
+		printf("\t\t\t\t\t\tIT'S A TIE!\n");
+		skorPemain1 = skorPemain1 + 1;
+		skorPemain2 = skorPemain2 + 1;
+		printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
+		printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
+	}
+}
