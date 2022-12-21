@@ -1,20 +1,33 @@
 Cara Bermain !!!
 Ada beberapa hal yang perlu dipahami untuk bermain game Tic Tac Toe, seperti:
-1. Tampilan awal pada permainan ini adalah tampilan menu awal dengan beberapa pilihan yaitu, 'Main' untuk memulai permainan, 'Cara Bermain dan Aturan Bermain' untuk mengetahui tata cara dan aturan dalam bermain game tictactoe ini, dan juga 'Keluar' untuk keluar dari permainan.
-2. Jika kita memilih 'Main” untuk memulai permainan, maka akan muncul perintah untuk menginputkan nama pemain. Setelah itu, kita akan memilih papan permainan mulai dari 3x3, 5x5, atau 7x7. Permainan ini terdiri dari 2 pemain, yaitu player 1 dan player 2. Di permainan ini, player 1 menandai dengan 'X', dan player 2 menandai dengan 'O'.
-3. Apabila salah satu player berhasil menyusun deretan X atau O sesuai dengan ketentuan papan (vertikal, horizontal, maupun diagonal) maka player dinyatakan menang, dan akan muncul keterangan bahwa player telah memenangkan permainan dan poin bertambah 3. Sedangkan jika dalam 1 kali permainan tidak ada yang menang, maka masing-masing player akan mendapatkan 1 poin. Jika player kalah dari lawan dengan kondisi player sudah tidak bisa menjalankan permainan lagi, maka permainan akan selesai dan player yang kalah tidak mendapatkan poin.
-4. Jika kita memilih 'Cara Bermain dan Aturan Bermain', maka akan muncul di layar tata cara bermain dan aturan bermain dari permainan tic tac toe ini.
+1. Tampilan awal pada permainan ini adalah tampilan menu awal dengan beberapa pilihan yaitu, 
+   'Main' untuk memulai permainan, 'Cara Bermain dan Aturan Bermain' untuk mengetahui tata cara dan aturan
+   dalam bermain game tictactoe ini, dan juga 'Keluar' untuk keluar dari permainan.
+2. Jika kita memilih 'Main” untuk memulai permainan, maka akan muncul perintah untuk menginputkan nama pemain.
+   Setelah itu, kita akan memilih papan permainan mulai dari 3x3, 5x5, atau 7x7. Permainan ini terdiri dari 2 pemain,
+   yaitu player 1 dan player 2. Di permainan ini, player 1 menandai dengan 'X', dan player 2 menandai dengan 'O'.
+3. Apabila salah satu player berhasil menyusun deretan X atau O sesuai dengan ketentuan papan (vertikal, horizontal,
+   maupun diagonal) maka player dinyatakan menang, dan akan muncul keterangan bahwa player telah memenangkan permainan
+   dan poin bertambah 3. Sedangkan jika dalam 1 kali permainan tidak ada yang menang, maka masing-masing player akan
+   mendapatkan 1 poin. Jika player kalah dari lawan dengan kondisi player sudah tidak bisa menjalankan permainan lagi,
+   maka permainan akan selesai dan player yang kalah tidak mendapatkan poin.
+4. Jika kita memilih 'Cara Bermain dan Aturan Bermain', maka akan muncul di layar tata cara bermain dan aturan bermain
+   dari permainan tic tac toe ini.
 5. Jika kita memilih 'Keluar', maka permainan atau program akan berhenti.
 
 Aturan Bermain !!!
-1. Saat memulai game, pemain diminta untuk meng-inputkan nama terlebih dahulu (player 1 sebagai (X) dan player 2 sebagai (O)).
+1. Saat memulai game, pemain diminta untuk meng-inputkan nama terlebih dahulu
+   (player 1 sebagai (X) dan player 2 sebagai (O)).
 2. Pemain memilih ukuran papan dengan dimensi 3x3, 5x5, atau 7x7.
 3. Giliran bermain akan dimulai dari player 1. 
-4. Pemain diminta menginputkan baris dan kolom yang akan dipilih                                                     
-5. Waktu yang diberikan untuk memilih posisi yaitu 10 detik, jika melewati batas waktu, giliran bermain akan berganti
-6. Jika salah satu pemain sudah membentuk deret X atau O secara vertikal, horizontal maupun diagonal dan pada papan berdimensi 3x3 membentuk 3 deret bidak, papan berdimensi 5x5 membentuk 4 deret bidak, papan berdimensi 7x7 membentuk 5 deret bidak, maka pemain tersebut bisa dikatakan menang
-7. Jika tidak ada pemain yang membentuk deret, maka permainan akan dinyatakan draw / seri
-8. Untuk setiap player yang menang skor atau poin akan bertambah 3, jika draw skor atau poin bertambah 1, jika kalah skor atau poin bertambah 0 atau tidak bertambah apa-apa.                        
+4. Pemain diminta menginputkan baris dan kolom yang akan dipilih.
+5. Waktu yang diberikan untuk memilih posisi yaitu 10 detik, jika melewati batas waktu, giliran bermain akan berganti.
+6. Jika salah satu pemain sudah membentuk deret X atau O secara vertikal, horizontal maupun diagonal dan
+   pada papan berdimensi 3x3 membentuk 3 deret bidak, papan berdimensi 5x5 membentuk 4 deret bidak,
+   papan berdimensi 7x7 membentuk 5 deret bidak, maka pemain tersebut dikatakan menang.
+7. Jika tidak ada pemain yang membentuk deret, maka permainan akan dinyatakan draw / seri.
+8. Untuk setiap player yang menang skor atau poin akan bertambah 3, jika draw skor atau poin bertambah 1,
+   jika kalah skor atau poin bertambah 0 atau tidak bertambah apa-apa.                        
 
 Selamat Bermain!!!
 
