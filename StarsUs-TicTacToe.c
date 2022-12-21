@@ -114,6 +114,12 @@ void resetPapan();
 int cekRuangKosong(int jumlahPapan);
 // Fungsi mengecek papan dalam keadaan kosong atau tidak
 
+void tampilPapanSkor(int skorPemain1, int skorPemain2);
+/*{Prosedur menampilkan nama dan skor pemain
+	I.S	: Nama dan skor pemain belum ditampilkan di layar
+	F.S : Nama dan skor pemain sudah ditampilkan di layar
+}*/
+
 void giliranPemain1();
 /*{Prosedur menampilkan giliran pemain1 untuk mulai bermain
 	I.S. : Pemain1 belum mulai giliran bermain
@@ -132,6 +138,13 @@ void cetakPemenang(char pemenang);
 	F.S. : Pemenang sudah ditampilkan di layar
 }*/
 
+//================================================= Modul Waktu ===========================================================//
+int waktuAwal();
+// Fungsi
+
+int waktuAkhir();
+// Fungsi 
+
 //================================================ Variabel Global ========================================================//
 const char Pemain1 = 'X'; // pemain1 default bidak X
 const char Pemain2 = 'O'; // pemain2 default bidak O
@@ -140,10 +153,6 @@ int hasilPapan;
 char papan[7][7]; // papan permainan dengan maksimal dimensi 7x7
 int skorPemain1 = 0;
 int skorPemain2 = 0;
-
-// Modul waktu
-int waktuAwal();
-int waktuAkhir();
 
 //================================================== Main Body ==========================================================//
 int main()
@@ -687,9 +696,10 @@ void bermain3x3()
 	int pilih;
 
 	resetPapan();
-
-	while (pemenang == ' ' && cekRuangKosong(3) != 0)
+	
+	while (pemenang == ' ' && cekRuangKosong(3) != 0)	
 	{
+		tampilPapanSkor(skorPemain1, skorPemain2);
 		buatPapan3x3();
 		giliranPemain1();
 		pemenang = cekPemenang3x3();
@@ -697,6 +707,7 @@ void bermain3x3()
 		{
 			break;
 		}
+		tampilPapanSkor(skorPemain1, skorPemain2);
 		buatPapan3x3();
 		giliranPemain2();
 		pemenang = cekPemenang3x3();
@@ -705,7 +716,8 @@ void bermain3x3()
 			break;
 		}
 	}
-
+	
+	tampilPapanSkor(skorPemain1, skorPemain2);
 	buatPapan3x3();
 	cetakPemenang(pemenang);
 	printf("\t\t\t\t\t\t-------------------\n");
@@ -733,6 +745,7 @@ void bermain5x5()
 
 	while (pemenang == ' ' && cekRuangKosong(5) != 0)
 	{
+		tampilPapanSkor(skorPemain1, skorPemain2);
 		buatPapan5x5();
 		giliranPemain1();
 		pemenang = cekPemenang5x5();
@@ -740,6 +753,7 @@ void bermain5x5()
 		{
 			break;
 		}
+		tampilPapanSkor(skorPemain1, skorPemain2);
 		buatPapan5x5();
 		giliranPemain2();
 		pemenang = cekPemenang5x5();
@@ -748,7 +762,8 @@ void bermain5x5()
 			break;
 		}
 	}
-
+	
+	tampilPapanSkor(skorPemain1, skorPemain2);
 	buatPapan5x5();
 	cetakPemenang(pemenang);
 	printf("\t\t\t\t\t\t--------------------\n");
@@ -776,6 +791,7 @@ void bermain7x7()
 
 	while (pemenang == ' ' && cekRuangKosong(7) != 0)
 	{
+		tampilPapanSkor(skorPemain1, skorPemain2);
 		buatPapan7x7();
 		giliranPemain1();
 		pemenang = cekPemenang7x7();
@@ -783,6 +799,7 @@ void bermain7x7()
 		{
 			break;
 		}
+		tampilPapanSkor(skorPemain1, skorPemain2);
 		buatPapan7x7();
 		giliranPemain2();
 		pemenang = cekPemenang7x7();
@@ -792,6 +809,7 @@ void bermain7x7()
 		}
 	}
 
+	tampilPapanSkor(skorPemain1, skorPemain2);
 	buatPapan7x7();
 	cetakPemenang(pemenang);
 	printf("\t\t\t\t\t\t--------------------\n");
@@ -834,4 +852,11 @@ void cetakPemenang(char pemenang)
 		printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[0][0], skorPemain1);
 		printf("\t\t\t\t\t\tSkor %s = %d\n", &nama[1][0], skorPemain2);
 	}
+}
+
+void tampilPapanSkor(int skorPemain1, int skorPemain2)
+{
+	printf("\n\t\t\t\t\t\tSkor Pemain\n");
+	printf("\t\t\t\t\t\t%s	= %d\n", &nama[0][0], skorPemain1);
+	printf("\t\t\t\t\t\t%s	= %d", &nama[1][0], skorPemain2);
 }
