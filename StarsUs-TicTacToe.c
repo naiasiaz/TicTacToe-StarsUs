@@ -429,10 +429,6 @@ void giliranPemain2()
 	} while (papan[x][y] != ' ');
 }
 
-// int hitungSkor(){
-//	printf("%s", &nama[0][0]"	\xb3	%s\n", &nama[1][0]);
-// }
-
 void buatPapan3x3()
 {
 	printf("\n\n\n\n\n\t\t\t\t\t\t   1	 2     3\n");
