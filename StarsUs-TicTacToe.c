@@ -14,11 +14,11 @@
  * Copyright Politeknik Negeri Bandung | JTK 22, 2022 StarsUs.  All rights reserved.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <windows.h>
-#include <conio.h>
-#include <time.h>
+#include <stdio.h>		// Library input output
+#include <stdlib.h>		// Library untuk memanggil fungsi-fungsi bawaan dari c
+#include <conio.h>		// Library untuk menampilkan hasil antarmuka (tampilan)
+#include <windows.h>	// Library untuk timeout
+#include <time.h>    	// Library untuk timeout
 
 //================================================ Modul Utama ========================================================//
 void tampilMenuAwal();
@@ -56,8 +56,6 @@ void pilihUkuranPapan();
 	I.S. : Papan belum dipilih oleh player
 	F.S. : Papan sudah dipilih oleh player
 }*/
-
-// int hitungSkor();
 
 void buatPapan3x3();
 /*{Prosedur untuk membuat papan 3x3
@@ -111,6 +109,12 @@ void resetPapan();
 	F.S. : Papan kosong tidak ada bidak
 }*/
 
+void resetSkor();
+/*{Prosedur mereset atau menjadikan skor kedua pemain menjadi 0
+	I.S : Skor pemain terisi
+	F.S : Skor pemain menjadi 0
+}*/
+
 int cekRuangKosong(int jumlahPapan);
 // Fungsi mengecek papan dalam keadaan kosong atau tidak
 
@@ -140,10 +144,10 @@ void cetakPemenang(char pemenang);
 
 //================================================= Modul Waktu ===========================================================//
 int waktuAwal();
-// Fungsi
+// Fungsi untuk mengkalkulasi waktu awal saat pemain giliran bermain
 
 int waktuAkhir();
-// Fungsi
+// Fungsi untuk mengkalkulasi waktu akhir saat pemain telah mengisi inputan. Jika waktu akhir melebih 10 detik maka pemain akan dianggap kalah
 
 //================================================ Variabel Global ========================================================//
 const char Pemain1 = 'X'; // pemain1 default bidak X
@@ -318,6 +322,12 @@ void resetPapan()
 	}
 }
 
+void resetSkor()
+{
+	skorPemain1 = 0;
+	skorPemain2 = 0;	
+}
+
 int cekRuangKosong(int jumlahPapan)
 {
 	int ruangKosong = jumlahPapan * jumlahPapan;
@@ -335,6 +345,7 @@ int cekRuangKosong(int jumlahPapan)
 	return ruangKosong;
 }
 
+// -- Referensi dari https://github.com/ZackyFaishal/MaungBandung
 int waktuAwal()
 {
 	clock_t waktu;
@@ -342,6 +353,7 @@ int waktuAwal()
 	return waktu;
 }
 
+// Mencatat waktu terakhir dihitung
 int waktuAkhir()
 {
 	clock_t waktu;
@@ -759,13 +771,14 @@ void bermain3x3()
 		bermain3x3();
 		break;
 	case 2:
+		resetSkor();
 		tampilMenuKeluar();
 	}
 }
 
 void bermain5x5()
 {
-	char pemenang = ' ';
+	char pemenang = ' '; // pemenang diisi kosong
 	int pilih;
 
 	resetPapan();
@@ -805,13 +818,14 @@ void bermain5x5()
 		bermain5x5();
 		break;
 	case 2:
+		resetSkor();
 		tampilMenuKeluar();
 	}
 }
 
 void bermain7x7()
 {
-	char pemenang = ' ';
+	char pemenang = ' '; // pemenang diisi kosong
 	int pilih;
 
 	resetPapan();
@@ -851,8 +865,10 @@ void bermain7x7()
 		bermain7x7();
 		break;
 	case 2:
+		resetSkor();
 		tampilMenuKeluar();
 	}
+	
 }
 
 void cetakPemenang(char pemenang)
