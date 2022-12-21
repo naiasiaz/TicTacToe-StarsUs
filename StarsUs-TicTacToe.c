@@ -514,26 +514,38 @@ char cekPemenang5x5()
 	// cek baris membentuk horizontal
 	for (int i = 0; i < 5; i++)
 	{
-		if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][1] == papan[i][2] && papan[i][2] == papan[i][3])
+		if (papan[i][0] != ' ')
 		{
-			return papan[i][0];
+			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][1] == papan[i][2] && papan[i][2] == papan[i][3])
+			{
+				return papan[i][0];
+			}
 		}
-		if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4])
+		if (papan[i][1] != ' ')
 		{
-			return papan[i][1];
+			if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4])
+			{
+				return papan[i][1];
+			}
 		}
 	}
 
 	// cek kolom membentuk vertikal
 	for (int i = 0; i < 5; i++)
 	{
-		if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[1][i] == papan[2][i] && papan[2][i] == papan[3][i])
+		if (papan[0][i] != ' ')
 		{
-			return papan[0][i];
+			if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[1][i] == papan[2][i] && papan[2][i] == papan[3][i])
+			{
+				return papan[0][i];
+			}
 		}
-		if (papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i])
+		if (papan[i][1] != ' ')
 		{
-			return papan[1][i];
+			if (papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i])
+			{
+				return papan[1][i];
+			}
 		}
 	}
 
@@ -561,7 +573,8 @@ char cekPemenang5x5()
 	if (papan[1][3] == papan[2][2] && papan[1][3] == papan[3][1] && papan[1][3] == papan[4][0] && papan[2][2] == papan[3][1] && papan[3][1] == papan[4][0])
 	{
 		return papan[1][3];
-	}if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1] && papan[2][3] == papan[3][2] && papan[3][2] == papan[4][1])
+	}
+	if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1] && papan[2][3] == papan[3][2] && papan[3][2] == papan[4][1])
 	{
 		return papan[1][4];
 	}
@@ -569,7 +582,7 @@ char cekPemenang5x5()
 	{
 		return papan[0][3];
 	}
-	
+
 	return ' ';
 }
 
@@ -578,34 +591,52 @@ char cekPemenang7x7()
 	// cek baris membentuk horizontal
 	for (int i = 0; i < 7; i++)
 	{
-		if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][0] == papan[i][4] && papan[i][1] == papan[i][2] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4])
+		if (papan[i][0] != ' ')
 		{
-			return papan[i][0];
+			if (papan[i][0] == papan[i][1] && papan[i][0] == papan[i][2] && papan[i][0] == papan[i][3] && papan[i][0] == papan[i][4] && papan[i][1] == papan[i][2] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4])
+			{
+				return papan[i][0];
+			}
 		}
-		if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4] && papan[i][1] == papan[i][5] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4] && papan[i][4] == papan[i][5])
+		if (papan[i][1] != ' ')
 		{
-			return papan[i][1];
+			if (papan[i][1] == papan[i][2] && papan[i][1] == papan[i][3] && papan[i][1] == papan[i][4] && papan[i][1] == papan[i][5] && papan[i][2] == papan[i][3] && papan[i][3] == papan[i][4] && papan[i][4] == papan[i][5])
+			{
+				return papan[i][1];
+			}
 		}
-		if (papan[i][2] == papan[i][3] && papan[i][2] == papan[i][4] && papan[i][2] == papan[i][5] && papan[i][2] == papan[i][6] && papan[i][3] == papan[i][4] && papan[i][4] == papan[i][5] && papan[i][5] == papan[i][6])
+		if (papan[i][2] != ' ')
 		{
-			return papan[i][2];
+			if (papan[i][2] == papan[i][3] && papan[i][2] == papan[i][4] && papan[i][2] == papan[i][5] && papan[i][2] == papan[i][6] && papan[i][3] == papan[i][4] && papan[i][4] == papan[i][5] && papan[i][5] == papan[i][6])
+			{
+				return papan[i][2];
+			}
 		}
 	}
 
 	// cek kolom membentuk vertikal
 	for (int i = 0; i < 7; i++)
 	{
-		if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[0][i] == papan[4][i] && papan[1][i] == papan[2][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i])
+		if (papan[0][i] != ' ')
 		{
-			return papan[0][i];
+			if (papan[0][i] == papan[1][i] && papan[0][i] == papan[2][i] && papan[0][i] == papan[3][i] && papan[0][i] == papan[4][i] && papan[1][i] == papan[2][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i])
+			{
+				return papan[0][i];
+			}
 		}
-		if (papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i] && papan[1][i] == papan[5][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i] && papan[4][i] == papan[5][i])
+		if (papan[1][i] != ' ')
 		{
-			return papan[1][i];
+			if (papan[1][i] == papan[2][i] && papan[1][i] == papan[3][i] && papan[1][i] == papan[4][i] && papan[1][i] == papan[5][i] && papan[2][i] == papan[3][i] && papan[3][i] == papan[4][i] && papan[4][i] == papan[5][i])
+			{
+				return papan[1][i];
+			}
 		}
-		if (papan[2][i] == papan[3][i] && papan[2][i] == papan[4][i] && papan[2][i] == papan[5][i] && papan[2][i] == papan[6][i] && papan[3][i] == papan[4][i] && papan[4][i] == papan[5][i] && papan[5][i] == papan[6][i])
+		if (papan[2][i] != ' ')
 		{
-			return papan[i][1];
+			if (papan[2][i] == papan[3][i] && papan[2][i] == papan[4][i] && papan[2][i] == papan[5][i] && papan[2][i] == papan[6][i] && papan[3][i] == papan[4][i] && papan[4][i] == papan[5][i] && papan[5][i] == papan[6][i])
+			{
+				return papan[i][1];
+			}
 		}
 	}
 
@@ -614,11 +645,11 @@ char cekPemenang7x7()
 	{
 		return papan[0][0];
 	}
-	if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4] && papan[1][1] == papan[5][5] && papan[2][2] == papan[3][3] && papan[3][3] == papan[4][4] && papan[4][4] == papan[5][5]) 
+	if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4] && papan[1][1] == papan[5][5] && papan[2][2] == papan[3][3] && papan[3][3] == papan[4][4] && papan[4][4] == papan[5][5])
 	{
 		return papan[1][1];
 	}
-	if (papan[2][2] == papan[3][3] && papan[2][2] == papan[4][4] && papan[2][2] == papan[5][5] && papan[2][2] == papan[6][6] && papan[3][3] == papan[4][4] && papan[4][4] == papan[5][5] && papan[5][5] == papan[6][6]) 
+	if (papan[2][2] == papan[3][3] && papan[2][2] == papan[4][4] && papan[2][2] == papan[5][5] && papan[2][2] == papan[6][6] && papan[3][3] == papan[4][4] && papan[4][4] == papan[5][5] && papan[5][5] == papan[6][6])
 	{
 		return papan[2][2];
 	}
@@ -682,7 +713,7 @@ char cekPemenang7x7()
 	{
 		return papan[0][4];
 	}
-	
+
 	return ' ';
 }
 
