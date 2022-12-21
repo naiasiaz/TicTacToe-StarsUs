@@ -147,7 +147,7 @@ int waktuAwal();
 // Fungsi untuk mengkalkulasi waktu awal saat pemain giliran bermain
 
 int waktuAkhir();
-// Fungsi untuk mengkalkulasi waktu akhir saat pemain telah mengisi inputan. Jika waktu akhir melebih 10 detik maka pemain akan dianggap kalah
+// Fungsi untuk mengkalkulasi waktu akhir saat pemain telah mengisi inputan. Jika waktu akhir melebih 10 detik maka pemain akan berganti giliran
 
 //================================================ Variabel Global ========================================================//
 const char Pemain1 = 'X'; // pemain1 default bidak X
