@@ -143,7 +143,7 @@ int waktuAwal();
 // Fungsi
 
 int waktuAkhir();
-// Fungsi 
+// Fungsi
 
 //================================================ Variabel Global ========================================================//
 const char Pemain1 = 'X'; // pemain1 default bidak X
@@ -550,35 +550,35 @@ char cekPemenang5x5()
 	}
 
 	// cek diagonal
-	if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3] && papan[1][1] == papan[2][2] && papan[2][2] == papan[3][3])
+	if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3] && papan[0][0] != ' ')
 	{
 		return papan[0][0];
 	}
-	if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4] && papan[2][2] == papan[3][3] && papan[3][3] == papan[4][4])
+	if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4] && papan[1][1] != ' ')
 	{
 		return papan[1][1];
 	}
-	if (papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3] && papan[2][1] == papan[3][2] && papan[3][2] == papan[4][3])
+	if (papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3] && papan[1][0] != ' ')
 	{
 		return papan[1][0];
 	}
-	if (papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4] && papan[1][2] == papan[2][3] && papan[2][3] == papan[3][4])
+	if (papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4] && papan[0][1] != ' ')
 	{
 		return papan[0][1];
 	}
-	if (papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1] && papan[1][3] == papan[2][2] && papan[2][2] == papan[3][1])
+	if (papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1] && papan[0][4] != ' ')
 	{
 		return papan[0][4];
 	}
-	if (papan[1][3] == papan[2][2] && papan[1][3] == papan[3][1] && papan[1][3] == papan[4][0] && papan[2][2] == papan[3][1] && papan[3][1] == papan[4][0])
+	if (papan[1][3] == papan[2][2] && papan[1][3] == papan[3][1] && papan[1][3] == papan[4][0] && papan[1][3] != ' ')
 	{
 		return papan[1][3];
 	}
-	if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1] && papan[2][3] == papan[3][2] && papan[3][2] == papan[4][1])
+	if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1] && papan[1][4] != ' ')
 	{
 		return papan[1][4];
 	}
-	if (papan[0][3] == papan[1][2] && papan[0][3] == papan[2][1] && papan[0][3] == papan[3][0] && papan[1][2] == papan[2][1] && papan[2][1] == papan[3][0])
+	if (papan[0][3] == papan[1][2] && papan[0][3] == papan[2][1] && papan[0][3] == papan[3][0] && papan[0][3] != ' ')
 	{
 		return papan[0][3];
 	}
@@ -641,75 +641,75 @@ char cekPemenang7x7()
 	}
 
 	// cek diagonal
-	if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3] && papan[0][0] == papan[4][4] && papan[1][1] == papan[2][2] && papan[2][2] == papan[3][3] && papan[3][3] == papan[4][4])
+	if (papan[0][0] == papan[1][1] && papan[0][0] == papan[2][2] && papan[0][0] == papan[3][3] && papan[0][0] == papan[4][4] && papan[0][0] != ' ')
 	{
 		return papan[0][0];
 	}
-	if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4] && papan[1][1] == papan[5][5] && papan[2][2] == papan[3][3] && papan[3][3] == papan[4][4] && papan[4][4] == papan[5][5])
+	if (papan[1][1] == papan[2][2] && papan[1][1] == papan[3][3] && papan[1][1] == papan[4][4] && papan[1][1] == papan[5][5] && papan[1][1] != ' ')
 	{
 		return papan[1][1];
 	}
-	if (papan[2][2] == papan[3][3] && papan[2][2] == papan[4][4] && papan[2][2] == papan[5][5] && papan[2][2] == papan[6][6] && papan[3][3] == papan[4][4] && papan[4][4] == papan[5][5] && papan[5][5] == papan[6][6])
+	if (papan[2][2] == papan[3][3] && papan[2][2] == papan[4][4] && papan[2][2] == papan[5][5] && papan[2][2] == papan[6][6] && papan[2][2] != ' ')
 	{
 		return papan[2][2];
 	}
-	if (papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3] && papan[1][0] == papan[5][4] && papan[2][1] == papan[3][2] && papan[3][2] == papan[4][3] && papan[4][3] == papan[5][4])
+	if (papan[1][0] == papan[2][1] && papan[1][0] == papan[3][2] && papan[1][0] == papan[4][3] && papan[1][0] == papan[5][4] && papan[1][0] != ' ')
 	{
 		return papan[1][0];
 	}
-	if (papan[2][1] == papan[3][2] && papan[2][1] == papan[4][3] && papan[2][1] == papan[5][4] && papan[2][1] == papan[6][5] && papan[3][2] == papan[4][3] && papan[4][3] == papan[5][4] && papan[5][4] == papan[6][5])
+	if (papan[2][1] == papan[3][2] && papan[2][1] == papan[4][3] && papan[2][1] == papan[5][4] && papan[2][1] == papan[6][5] && papan[2][1] != ' ')
 	{
 		return papan[2][1];
 	}
-	if (papan[2][0] == papan[3][1] && papan[2][0] == papan[4][2] && papan[2][0] == papan[5][3] && papan[2][0] == papan[6][4] && papan[3][1] == papan[4][2] && papan[4][2] == papan[5][3] && papan[5][3] == papan[6][4])
+	if (papan[2][0] == papan[3][1] && papan[2][0] == papan[4][2] && papan[2][0] == papan[5][3] && papan[2][0] == papan[6][4] && papan[2][0] != ' ')
 	{
 		return papan[2][0];
 	}
-	if (papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4] && papan[0][1] == papan[4][5] && papan[1][2] == papan[2][3] && papan[2][3] == papan[3][4] && papan[3][4] == papan[4][5])
+	if (papan[0][1] == papan[1][2] && papan[0][1] == papan[2][3] && papan[0][1] == papan[3][4] && papan[0][1] == papan[4][5] && papan[0][1] != ' ')
 	{
 		return papan[0][1];
 	}
-	if (papan[1][2] == papan[2][3] && papan[1][2] == papan[3][4] && papan[1][2] == papan[4][5] && papan[1][2] == papan[5][6] && papan[2][3] == papan[3][4] && papan[3][4] == papan[4][5] && papan[4][5] == papan[5][6])
+	if (papan[1][2] == papan[2][3] && papan[1][2] == papan[3][4] && papan[1][2] == papan[4][5] && papan[1][2] == papan[5][6] && papan[1][2] != ' ')
 	{
 		return papan[1][2];
 	}
-	if (papan[0][2] == papan[1][3] && papan[0][2] == papan[2][4] && papan[0][2] == papan[3][5] && papan[0][2] == papan[4][6] && papan[1][3] == papan[2][4] && papan[2][4] == papan[3][5] && papan[3][5] == papan[4][6])
+	if (papan[0][2] == papan[1][3] && papan[0][2] == papan[2][4] && papan[0][2] == papan[3][5] && papan[0][2] == papan[4][6] && papan[0][2] != ' ')
 	{
 		return papan[0][2];
 	}
-	if (papan[0][6] == papan[1][5] && papan[0][6] == papan[2][4] && papan[0][6] == papan[3][3] && papan[0][6] == papan[4][2] && papan[1][5] == papan[2][4] && papan[2][4] == papan[3][3] && papan[3][3] == papan[4][2])
+	if (papan[0][6] == papan[1][5] && papan[0][6] == papan[2][4] && papan[0][6] == papan[3][3] && papan[0][6] == papan[4][2] && papan[0][6] != ' ')
 	{
 		return papan[0][6];
 	}
-	if (papan[1][5] == papan[2][4] && papan[1][5] == papan[3][3] && papan[1][5] == papan[4][2] && papan[1][5] == papan[5][1] && papan[2][4] == papan[3][3] && papan[3][3] == papan[4][2] && papan[4][2] == papan[5][1])
+	if (papan[1][5] == papan[2][4] && papan[1][5] == papan[3][3] && papan[1][5] == papan[4][2] && papan[1][5] == papan[5][1] && papan[1][5] != ' ')
 	{
 		return papan[1][5];
 	}
-	if (papan[2][4] == papan[3][3] && papan[2][4] == papan[4][2] && papan[2][4] == papan[5][1] && papan[2][4] == papan[6][0] && papan[3][3] == papan[4][2] && papan[4][2] == papan[5][1] && papan[5][1] == papan[6][0])
+	if (papan[2][4] == papan[3][3] && papan[2][4] == papan[4][2] && papan[2][4] == papan[5][1] && papan[2][4] == papan[6][0] && papan[2][4] != ' ')
 	{
 		return papan[2][4];
 	}
-	if (papan[1][6] == papan[2][5] && papan[1][6] == papan[3][4] && papan[1][6] == papan[4][3] && papan[1][6] == papan[5][2] && papan[2][5] == papan[3][4] && papan[3][4] == papan[4][3] && papan[4][3] == papan[5][2])
+	if (papan[1][6] == papan[2][5] && papan[1][6] == papan[3][4] && papan[1][6] == papan[4][3] && papan[1][6] == papan[5][2] && papan[1][6] != ' ')
 	{
 		return papan[1][6];
 	}
-	if (papan[2][5] == papan[3][4] && papan[2][5] == papan[4][3] && papan[2][5] == papan[5][2] && papan[2][5] == papan[6][1] && papan[3][4] == papan[4][3] && papan[4][3] == papan[5][2] && papan[5][2] == papan[6][1])
+	if (papan[2][5] == papan[3][4] && papan[2][5] == papan[4][3] && papan[2][5] == papan[5][2] && papan[2][5] == papan[6][1] && papan[2][5] != ' ')
 	{
 		return papan[2][5];
 	}
-	if (papan[2][6] == papan[3][5] && papan[2][6] == papan[4][4] && papan[2][6] == papan[5][3] && papan[2][6] == papan[6][2] && papan[3][5] == papan[4][4] && papan[4][4] == papan[5][3] && papan[5][3] == papan[6][2])
+	if (papan[2][6] == papan[3][5] && papan[2][6] == papan[4][4] && papan[2][6] == papan[5][3] && papan[2][6] == papan[6][2] && papan[2][6] != ' ')
 	{
 		return papan[2][6];
 	}
-	if (papan[0][5] == papan[1][4] && papan[0][5] == papan[2][3] && papan[0][5] == papan[3][2] && papan[0][5] == papan[4][1] && papan[1][4] == papan[2][3] && papan[2][3] == papan[3][2] && papan[3][2] == papan[4][1])
+	if (papan[0][5] == papan[1][4] && papan[0][5] == papan[2][3] && papan[0][5] == papan[3][2] && papan[0][5] == papan[4][1] && papan[0][5] != ' ')
 	{
 		return papan[0][5];
 	}
-	if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1] && papan[1][4] == papan[5][0] && papan[2][3] == papan[3][2] && papan[3][2] == papan[4][1] && papan[4][1] == papan[5][0])
+	if (papan[1][4] == papan[2][3] && papan[1][4] == papan[3][2] && papan[1][4] == papan[4][1] && papan[1][4] == papan[5][0] && papan[1][4] != ' ')
 	{
 		return papan[1][4];
 	}
-	if (papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1] && papan[0][4] == papan[4][0] && papan[1][3] == papan[2][2] && papan[2][2] == papan[3][1] && papan[3][1] == papan[4][0])
+	if (papan[0][4] == papan[1][3] && papan[0][4] == papan[2][2] && papan[0][4] == papan[3][1] && papan[0][4] == papan[4][0] && papan[0][4] != ' ')
 	{
 		return papan[0][4];
 	}
@@ -723,8 +723,8 @@ void bermain3x3()
 	int pilih;
 
 	resetPapan();
-	
-	while (pemenang == ' ' && cekRuangKosong(3) != 0)	
+
+	while (pemenang == ' ' && cekRuangKosong(3) != 0)
 	{
 		tampilPapanSkor(skorPemain1, skorPemain2);
 		buatPapan3x3();
@@ -743,7 +743,7 @@ void bermain3x3()
 			break;
 		}
 	}
-	
+
 	tampilPapanSkor(skorPemain1, skorPemain2);
 	buatPapan3x3();
 	cetakPemenang(pemenang);
@@ -789,7 +789,7 @@ void bermain5x5()
 			break;
 		}
 	}
-	
+
 	tampilPapanSkor(skorPemain1, skorPemain2);
 	buatPapan5x5();
 	cetakPemenang(pemenang);
